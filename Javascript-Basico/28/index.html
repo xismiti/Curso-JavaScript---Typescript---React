@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="text"></p>
+
+    <script>
+
+        
+
+        const number =  Number (window.prompt('Digite um numero: '));
+        const title =  document.getElementById("title");
+        const text = document.getElementById("text")
+        
+
+        if (Number.isNaN(number)){
+
+            alert('Digite um numero valido!')
+
+        } else {
+
+            title.innerHTML = `Seu numero é ${number}`;
+            text.innerHTML= `A raiz de seu numero é ${Math.sqrt(number)}<br/>
+            ${number} é inteiro: ${Number.isInteger(number)} <br/>
+            É Nan: ${Number.isNaN(Number)} <br/>
+            Arredondado para baixo: ${Math.floor(number)} <br/>
+            Arredondado para cima: ${Math.ceil(number)} <br/>
+            Com duas casas Decimais: ${number.toFixed(2)}`
+        }
+
+
+    </script>
+</body>
+</html>

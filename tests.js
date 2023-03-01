@@ -1,6 +1,6 @@
 
 
-function getPokemons (){
+function busca (busca){
 
 //Array de pokemons que vão vir da api
     const pokemons = [
@@ -35,10 +35,16 @@ function getPokemons (){
         },
 
     ];
-    const pokemonsChoiced = pokemons.filter((i) => i.id === 2 || i.id === 5)
+    const resultado = [];
+    for (let i of pokemons){
+        if (i.class.includes(busca)){
 
+            resultado.push(i)
+            
+        }
+    }
+    
 
-    return pokemonsChoiced;
 }
+busca('trapper');
 
-console.log(getPokemons());
